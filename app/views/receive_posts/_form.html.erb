@@ -15,7 +15,7 @@
     <%= f.text_field :title, placeholder: "Enter post title", autofocus: "true", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.text_field :category, placeholder: "Enter category", class: "form-control" %>
+    <%= f.select :category, @receive_post_categories.collect {|c| [c.name, c.id]}, {include_blank: "Select category"}, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.text_field :location, placeholder: "Enter location", class: "form-control" %>
