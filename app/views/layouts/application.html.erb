@@ -73,6 +73,8 @@
 		</div>
 	</footer>
 
+	<%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=#{Figaro.env.google_api_key}' %>
+
 	<%= javascript_include_tag 'application' %>
 </body>
 </html>
