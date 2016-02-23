@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :receive_posts
   resources :give_posts
   # The priority is based upon order of creation: first created -> highest priority.
