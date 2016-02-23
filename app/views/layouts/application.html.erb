@@ -14,31 +14,33 @@
 <body>
 
 	<header class="page-header">
-		<nav class="navbar nav-tabs navbar-fixed-top">
+		<nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<%= link_to "Sharing Grace", class: "navbar-brand" %>
+					<%= link_to "Sharing Grace", root_path, class: "navbar-brand" %>
 				</div>
-				<ul class="nav navbar-nav nav-tabs navbar-left">
+				<ul class="nav navbar-nav navbar-left">
 					<li>
-						<%= link_to "First Page" %>
+						<%= link_to "My Account", edit_user_registration_path %>
 					</li>
 					<% if GivePost.all != nil && GivePost.all.length > 0 %>	
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aira-haspopup="true" aria-expanded="false">Give Posts <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aira-haspopup="true" aria-expanded="false">Give Posts<span class="caret"></span></a>
 							<ul class="dropdown-menu">
+								<li><%= link_to "New Give Post", new_give_post_path %></li> 
 								<% @giveposts.each do |post| %>
-									<li><%= link_to post.name %></li>
+									<li><%= link_to post.name, post %></li>
 								<% end %>
 							</ul>
 						</li>
 					<% end %>
 					<% if ReceivePost.all != nil && ReceivePost.all.length > 0 %>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aira-haspopup="true" aria-expanded="false">Receive Posts <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aira-haspopup="true" aria-expanded="false">Receive Posts<span class="caret"></span></a>
 							<ul class="dropdown-menu">
+								<li><%= link_to "New Receive Post", new_receive_post_path %></li>
 								<% @receiveposts.each do |post| %>
-									<li><%= link_to post.name %></li>
+									<li><%= link_to post.name, post %></li>
 								<% end %>
 							</ul>
 						</li>
