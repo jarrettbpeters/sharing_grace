@@ -69,6 +69,6 @@ class GivePostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def give_post_params
-      params.require(:give_post).permit(:title, :category, :location, :description, :condition, :user_id)
+      params.require(:give_post).permit(:title, :category, :location, :description, :condition, :user_id, :latitude, :longitude)
     end
 end

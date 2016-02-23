@@ -69,6 +69,6 @@ class ReceivePostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def receive_post_params
-      params.require(:receive_post).permit(:title, :category, :location, :description, :condition, :user_id)
+      params.require(:receive_post).permit(:title, :category, :location, :description, :condition, :user_id, :latitude, :longitude)
     end
 end
