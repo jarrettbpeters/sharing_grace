@@ -5,8 +5,6 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
 
-  before_action :give_post_categories, :receive_post_categories
-
   def give_post_categories
 	  @give_post_categories = GivePost.pluck(:category).sort.uniq!
 	  @give_post_categories ||= GivePost.pluck(:category).sort
@@ -17,6 +15,4 @@ class ApplicationController < ActionController::Base
     @receive_post_categories ||= ReceivePost.pluck(:category).sort
   end
 
-  @giveposts = GivePost.all
-  @receiveposts = ReceivePost.all
 end
