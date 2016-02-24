@@ -15,10 +15,10 @@
     <%= f.text_field :title, placeholder: "Enter post title", autofocus: "true", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.select :category, [["Car Seats", "Car Seats"], ["Strollers, & Trailers", "Strollers, & Trailers"], ["Diapering", "Diapering"], ["Monitors & Nursery", "Monitors & Nursery"], ["Feeding", "Feeding"], ["Carriers & Wraps", "Carriers & Wraps"], ["Sleeping", "Sleeping"]], {"Select category"} %>
+    <%= f.select(:category, [["Car Seats", "Car Seats"], ["Strollers & Trailers", "Strollers & Trailers"], ["Diapering", "Diapering"], ["Monitors & Nursery", "Monitors & Nursery"], ["Feeding", "Feeding"], ["Carriers & Wraps", "Carriers & Wraps"], ["Sleeping", "Sleeping"]], {include_blank: "Select category"}) %>
   </div>
   <div class="form-group">
-    <%= f.select :age_range, [['Newborn', 1], ['Infant', 2], ['Toddler', 3], ['Child', 4]], {"Select age range"} %>
+    <%= f.select(:age_range, [['Newborn', 1], ['Infant', 2], ['Toddler', 3], ['Child', 4]], {include_blank: "Select age range"}) %>
   </div>
   <div class="form-group">
     <%= f.text_field :location, placeholder: "Enter location", class: "form-control" %>
