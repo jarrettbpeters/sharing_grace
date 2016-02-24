@@ -28,8 +28,8 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aira-haspopup="true" aria-expanded="false">Give Posts<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><%= link_to "New Give Post", new_give_post_path %></li> 
-								<% @giveposts.each do |post| %>
-									<li><%= link_to post.name, post %></li>
+								<% @give_post_categories.each do |category| %>
+									<li><%= link_to category, category %></li>
 								<% end %>
 							</ul>
 						</li>
@@ -39,8 +39,8 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aira-haspopup="true" aria-expanded="false">Receive Posts<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><%= link_to "New Receive Post", new_receive_post_path %></li>
-								<% @receiveposts.each do |post| %>
-									<li><%= link_to post.name, post %></li>
+								<% @receive_post_categories.each do |post| %>
+									<li><%= link_to category, category %></li>
 								<% end %>
 							</ul>
 						</li>

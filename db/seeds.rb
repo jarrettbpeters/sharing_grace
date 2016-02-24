@@ -5,5 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-give_post_categories = GivePost.create([{category: "Car Seats, Strollers, & Trailers"}, {category: "Diapering"}, {category: "Monitors & Nursery"}, {category: "Feeding"}, {category: "Carriers & Wraps"}, {category: "Sleeping"}])
