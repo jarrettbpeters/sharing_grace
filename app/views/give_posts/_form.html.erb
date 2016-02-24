@@ -18,6 +18,9 @@
     <%= f.select :category, @give_post_categories.collect {|p| [p.category, p.id]}, {include_blank: "Select category"}, class: "form-control" %>
   </div>
   <div class="form-group">
+    <%= f.select(:age_range, [['Newborn', 1], ['Infant', 2], ['Toddler', 3], ['Child', 4]]), class: "form-control" %>
+  </div>
+  <div class="form-group">
     <%= f.text_field :location, placeholder: "Enter location", class: "form-control" %>
   </div>
   <div class="form-group">
