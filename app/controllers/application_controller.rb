@@ -14,5 +14,4 @@ class ApplicationController < ActionController::Base
     @receive_post_categories = ReceivePost.pluck(:category).sort.uniq!
     @receive_post_categories ||= ReceivePost.pluck(:category).sort
   end
-
 end
