@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-  resources :posts
+  devise_for :users
+  resources :receive_posts
+  resources :give_posts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+
+  root 'give_posts#index'
+
+  get 'new_give_post' => 'give_posts#new'
+  get 'new_receive_post' => 'receive_posts#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

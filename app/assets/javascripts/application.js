@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+<<<<<<< HEAD
+=======
+//= require bootstrap-sprockets
+>>>>>>> parent of 5917e9f... Merge pull request #7 from andrew-breunig/fix_form_branch
 //= require_tree .
