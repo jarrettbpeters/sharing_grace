@@ -1,0 +1,2 @@
+module ReceivePostsHelper
+end
